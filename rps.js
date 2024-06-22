@@ -14,4 +14,18 @@ function getComputerChoice() {
     }
 }
 
+//define function 
+//use prompt method to ask the user for their choice
+//validate the input to ensure its one of the valid choices(r, p, s)
+//return the valid choice
+function getHumanChoice() {
+    const choice = prompt("Enter your choice (rock, paper, or scissors): ").toLowerCase();
+    if(choice === "rock" || choice === "paper" || choice === "scissors") {
+        return choice;
+    } else {
+        console.log("Invalid choice. Please enter rock, paper, or scissors.");
+        return getHumanChoice();
+    }
+}
+
 
